@@ -64,7 +64,7 @@ a:hover {
 
 .right {
 	position: relative;
-	float: right;
+	display: inline-block;
 	margin-top: 50px;
 	width: 88%;
 	/*height: 400px;*/
