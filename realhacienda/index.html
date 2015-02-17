@@ -29,15 +29,23 @@
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
 		        <li class="active"><a href="#">Home</a></li>
-		        <li><a href="#menu">Menu</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#lunch">Lunch</a></li>
+		            <li><a href="#dinner">Dinner</a></li>
+		            <li><a href="#drinks">Beverages</a></li>
+		          </ul>
+		        </li>
+		        <!-- <li><a href="#menu">Menu</a></li> -->
 		        <li><a href="#about">About</a></li>
 		        <li><a href="#gallery">Gallery</a></li>
 		        <li class="dropdown">
 		          <a href="#contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact Us <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
-		            <li><a href="#">contact 1</a></li>
-		            <li><a href="#">contact 2</a></li>
-		            <li><a href="#">contact 3</a></li>
+		            <li><a data-toggle="modal" data-target="#contactmodal">Contact Form</a></li>
+		            <li><a href="mailto:us@real-hacienda.com">us@real-hacienda.com</a></li>
+		            <li><a href="tel:2706845595">270 684 5595</a></li>
 		          </ul>
 		        </li>
 		      </ul>
@@ -50,201 +58,168 @@
 		  <h1>Real Hacienda</h1>
 		  <p>Experience the taste and feel of Mexico's culinary culture!</p>
 		  <p><a class="btn btn-primary btn-lg" href="#menu" role="button">Read Our Menu</a></p>
-		  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
             Launch demo modal
-          </button>
+          </button> -->
 	  </div>
 	</div>
 	
 	<div class="container">
 		<div class="page-header" id="menu">
-		  <h1>Menu <small>Subtext for menu</small></h1>
+		  <h1>Menu <small></small></h1>
 		</div>
 		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-			  <a data-toggle="modal" data-target="#myModal">
+	   	  <div id="lunch" class="col-12 text-center">
+			<h1>Lunch</h1>
+		  </div>
+		  <div class="col-sm-6 col-md-5-offset-1">
+			  <a data-toggle="modal" data-target="#luncheon">
 			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
+			      <img src="http://placehold.it/400x200" alt="...">
 			      <div class="caption">
 			        <h3>Luncheon Menu</h3>
-			        <p>Available 11am to 3pm, Mon-Sat. Served with chips and salsa, and Mexican rice and beans.</p>
+			        <p>Available 11am to 3pm, Mon-Sat.</p>
 			        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
 			      </div>
 			    </div>
 		      </a>
 		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
+		  <div class="col-sm-6 col-md-5-offset-1">
+		    <a data-toggle="modal" data-target="#specialties">
 			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
+			      <img src="http://placehold.it/400x200" alt="...">
 			      <div class="caption">
 			        <h3>Lunch Specialties</h3>
-			        <p>...</p>
+			        <p>Your favorite lunch selections for the day.</p>
 			      </div>
 			    </div>
 		    </a>
 		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Appetizers</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
+		 </div>
+		 <div class="row">
+		  <div id="dinner" class="col-sm-12 col-md-12 col-lg-12 text-center">
+			<h1>Dinner</h1>
 		  </div>
-		</div>
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-			  <a data-toggle="modal" data-target="#myModal">
+		  <div class="col-sm-6 col-md-5-offset-1">
+		    <a data-toggle="modal" data-target="#samples">
 			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>A La Carte</h3>
-			        <p>...</p>
-			        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-			      </div>
-			    </div>
-		      </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Salads</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Fajitas</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
-		</div>
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-			  <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Steak</h3>
-			        <p>...</p>
-			        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-			      </div>
-			    </div>
-		      </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Vegetarian Plates</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
+			      <img src="http://placehold.it/400x200" alt="...">
 			      <div class="caption">
 			        <h3>Sample Platters</h3>
-			        <p>...</p>
+			        <p>Start of with something new!</p>
 			      </div>
 			    </div>
 		    </a>
 		  </div>
-		</div>
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-			  <a data-toggle="modal" data-target="#myModal">
+		  <div class="col-sm-6 col-md-5-offset-1">
+		    <a data-toggle="modal" data-target="#combination">
 			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
+			      <img src="http://placehold.it/400x200" alt="...">
 			      <div class="caption">
 			        <h3>Combination Dinners</h3>
-			        <p>...</p>
-			        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-			      </div>
-			    </div>
-		      </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Specials</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Traditional Favorites</h3>
-			        <p>...</p>
+			        <p>Mix and match your favorite foods.</p>
 			      </div>
 			    </div>
 		    </a>
 		  </div>
 		</div>
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-			  <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Little Amigos</h3>
-			        <p>...</p>
-			        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-			      </div>
-			    </div>
-		      </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Side Orders</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <a data-toggle="modal" data-target="#myModal">
-			    <div class="thumbnail">
-			      <img src="http://placehold.it/242x200" alt="...">
-			      <div class="caption">
-			        <h3>Desserts</h3>
-			        <p>...</p>
-			      </div>
-			    </div>
-		    </a>
-		  </div>
+		<div id="drinks" class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 text-center visible-lg-block, hidden-xs">
+			  	<a data-toggle="modal" data-target="#beverages">
+					<div class="thumbnail">
+				      <img src="http://placehold.it/600x300" alt="...">
+				      <div class="caption">
+				        <h1>Beverages</h1>
+				        <p>Must be at least 21 years of age to order and/or consume alcoholic beverages</p>
+				      </div>
+				    </div>
+				</a>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-12 text-center hidden-sm hidden-md hidden-lg">
+			  	<a data-toggle="modal" data-target="#beverages">
+					<div class="thumbnail">
+				      <img src="http://placehold.it/400x200" alt="...">
+				      <div class="caption">
+				        <h1>Beverages</h1>
+				        <p>Must be at least 21 years of age to order and/or consume alcoholic beverages</p>
+				      </div>
+				    </div>
+				</a>
+			</div>
 		</div>
+
 		<div class="page-header" id="about">
-		  <h1>About <small>Subtext for about</small></h1>
+		  <h1>About <small>How it all started</small></h1>
+		  <p>Real Hacienda started in Owensboro, Kentucky, September 26th, 1996, under the name of La Fiesta. After eight years the restaurant relocated to a new address and also opened  a  second location on the east side by the Hwy #54; we are proud to offer the best Mexican food right to your table.</p>
+		  <p>Real Hacienda Mexican Restaurant was created with the vision to offer a warm place where our friends can experience the taste and feel of México's culinary culture.</p>
+		  <p>At Real Hacienda, we beleive that a  way to know our rooted mexican culture, is trying our recipes of several generations carefully crafted in our  dishes and presented to you with the best product quality.</p>
+		  <p>Each recipe has been carried on by generations in The Ortiz family and applied to each and every one of our dishes served to your table.</p>
+		  <p>We offer you exceptional service, great food, warm atmosphere and fair prices in order to feel like you are in México without leaving town!</p>
 		</div>
 		<div class="page-header" id="gallery">
-		  <h1>Gallery <small>Subtext for gallery</small></h1>
+		  <h1>Gallery <small></small></h1>
+		  <div class="row">
+		  	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+		  </div>
 		</div>
 	</div>
 	
@@ -271,15 +246,446 @@
 	</footer>
 
 	<!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="luncheon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">Luncheon Menu</h4>
           </div>
-          <div class="modal-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi perspiciatis dignissimos ex labore voluptatem, necessitatibus hic voluptatum sint possimus expedita eveniet vitae repellat enim culpa quam cupiditate. Placeat, in?
+          <div class="modal-body row">
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Taco:</b> A crispy corn tortilla stuffed with your choice of fillings, with lettuce and cheese.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Enchilada:</b> A soft corn tortilla, stuffed with your choice of fillings, topped with salsa and cheese.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Tamale:</b> Tender beef wrapped in an authentic soft corn shell, topped with ground beed and mild sauce.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Tostada:</b> A flat crispy corn tortilla, covered with beef, lettuce, cheese tomato and sour cream.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Chalupa:</b> A flat crispy corn tortilla served with beans, lettuce, guacamole and tomato.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Tostaguac:</b> A flat crispy corn tortilla, covered with ground beef, beans, lettuce, cheese and guacamole.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Chile Relleno:</b> A long green poblano pepper tugged with cheese, wrapped in eggs and deep fried.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Quesadilla:</b> Flour tortilla filled with cheese and your choice of beef or chicken.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.95</p>
+            		</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="specialties" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lunch Specialties</h4>
+          </div>
+          <div class="modal-body row">
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Speedy Gonzalez:</b> One taco, one enchilada, choice of rice or beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Huevos Rancheros:</b> Two eggs topped with sauce, served with rice, beans and tortillas.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Taco Salad:</b> A crispy flour tortilla with cheese sauce, topped with ground beef or spicy chicken, lettuce, sour cream, cheese and tomato.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$5.45</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Taco Salad Grande (Fajita):</b> Our traditional taco salad, but filled with grilled chicken or strips of steaks, served with lettuce, sour cream, guacamole, cheese and pico de gallo.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$6.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Chimichanga:</b> Stuffed flour tortilla with your choice of chunks of beef or spicy chicken, deep fried and topped with cheese sauce. Served with beans, rice, pico, guacamole and sour cream.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$6.25</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Taquitos Mexicanos:</b> Two corn tortillas wrapped around your favorite filling, deep fried to a golden brown, topped with lettuce, guacamole, sour cream and pico de gallo.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$6.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Special Lunch #1:</b> Chile relleno, taco and beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$5.45</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Special Lunch #2:</b> Beef burrito, rice and beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$5.45</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Special Lunch #3 (Vegetarian):</b> One bean burrito, cheese enchilada with rice.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$5.45</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Burrito Real:</b> A large flour tortilla filled with seasoned ground beef or chicken, served with rice, beans or sour cream salad.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$6.75</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Fajitas:</b> We use our special recipe to cook tender strips of chicken tenders or beef skirt steak, with sauteed onions and bell peppers. Served with rice, beans, tortillas, lettuce, guacamole, sour cream and pico de gallo.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$7.45</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Huevos Con Chorizo:</b> Two scrambled eggs with Mexican sausage, served with beans, rice and tortillas.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Arroz Con Pollo:</b> Grilled seasoned tender chicken, over Mexican rice and topped with cheese.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$6.75</p>
+            		</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="samples" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Sample Platters</h4>
+          </div>
+          <div class="modal-body row">
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>El Presidente:</b> One tostaguac (A flat crispy corn tortilla, covered with ground beef, beans, lettuce, cheese and guacamole), one ground beef enchilada, topped with cheese sauce, one chile relleno, one spicy chicken burrito topped with HOT tomatillo sauce, served with rice and beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$10.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Special Dinner:</b> One chalupa, one taco, one chile relleno, one tamale, one enchilada, served with rice and beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$9.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Felipe's Dinner:</b> One tostada (A flat crispy corn tortilla, covered with beef, lettuce,  cheese tomato and sour cream), one taco, one beef burrito, one beef enchilada, served with rice and beans.</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$9.95</p>
+            		</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="combination" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Combination Dinners</h4>
+          </div>
+          <div class="modal-body row">
+          		<div class="row text-center"><h3>$7.45</h3></div>
+            	<div class="row">
+	            	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+	            	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+	            		<ol>
+	            			<li>One taco, two enchiladas & Mexican rice.</li>
+	            			<li>One taco, one enchilada and one chalupa.</li>
+	            			<li>One enchilada, one taco and one chile relleno.</li>
+	            			<li>Two tacos, one enchilada and one chile con queso.</li>
+	            			<li>Two beef enchiladas, Mexican rice and refried beans.</li>
+	            			<li>One beef enchilada, one taco, Mexican beans and rice.</li>
+	            			<li>One enchilada, chile relleno, rice and beans.</li>
+	            			<li>One enchilada, one tamale, rice and beans.</li>
+	            			<li>One enchilada, one chalupa and rice.</li>
+	            			<li>Three beef tacos, rice and beans.</li>
+	            			<li>One burrito, one enchilada and one taco.</li>
+	            			<li>One chalupa, one chile relleno and fried beans.</li>
+	            			<li>One enchilada, one burrito and one chile relleno.</li>
+	            			<li>One taco, one chile relleno and one chalupa.</li>
+	            			<li>One burrito, one enchilada and one tamale.</li>
+	            			<li>One chalupa, one chile relleno and one burrito.</li>
+	            			<li>One burrito, one enchilada and rice and beans.</li>
+	            			<li>One chalupa, one chile relleno and one enchilada.</li>
+	            			<li>One chalupa, one burrito and one enchilada.</li>
+	            			<li>One chile relleno, one taco, rice and beans.</li>
+	            			<li>One taco, one burrito and one chalupa.</li>
+	            			<li>One burrito, one chile relleno and one taco.</li>
+	            			<li>One taco, one burrito, rice and beans.</li>
+	            			<li>One chile relleno, one burrito and Mexican rice.</li>
+	            			<li>One chalupa, one taco and one tostada.</li>
+	            		</ol>
+	            	</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="beverages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Beverages</h4>
+          </div>
+          <div class="modal-body row">
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Soft Drinks:</b> Coke, Diet Coke, Coke Zero, Fanta, Sprite, Mr. Pibb, Lemonade, Iced Tea, Milk, Coffee</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$1.99</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Domestic Beer:</b> Budweiser, Bud Light, Miller Lite, MGD, Michelob Light Ultra, Coors Light</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$2.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Mexican Beer:</b> Corona, Corona Light, Dos Equis (Dark and Lager), Modelo Especial, Negra Modelo, Carta Blanca, Tecate</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$2.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Draft:</b> Budweiser, Bud Light and Miller Light</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$2.95</p>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            			<p><b>Margaritas:</b> Regular and Pitcher (sharing only)</p>
+            		</div>
+            		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        				<p>$4.95</p>
+            		</div>
+            	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+          </div>
+          <div class="modal-body row">
+				<div class="row">
+				  <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				    <small><i></i>Add alerts if form ok... success, else error.</i></small>
+					<div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message sent. (If form ok!)</strong></div>	  
+				    <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please check the inputs. (If form error!)</strong></div>
+				  </div> -->
+					  <form role="form" action="" method="post" >
+					  	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+					    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					      <!-- <div class="well well-sm"><strong><i class="glyphicon glyphicon-ok form-control-feedback"></i> Required Field</strong></div> -->
+					      <div class="form-group">
+					        <label for="InputName">Your Name</label>
+					        <div class="input-group">
+					          <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+					          <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk form-control-feedback"></i></span></div>
+					      </div>
+					      <div class="form-group">
+					        <label for="InputEmail">Your Email</label>
+					        <div class="input-group">
+					          <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+					          <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk form-control-feedback"></i></span></div>
+					      </div>
+					      <div class="form-group">
+					        <label for="InputMessage">Message</label>
+					        <div class="input-group">
+					          <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+					          <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk form-control-feedback"></i></span></div>
+					      </div>
+					      <div class="form-group">
+					        <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
+					        <div class="input-group">
+					          <input type="text" class="form-control" name="InputReal" id="InputReal" required>
+					          <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk form-control-feedback"></i></span></div>
+					      </div>
+					      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+					    </div>
+					  </form>
+				  </div>
+				<div class="row">
+				  	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				  	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"><hr class="featurette-divider hidden-lg"></div>
+				  	</div>
+				  	<div class="row">
+				  	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				  <div class="col-xs-5 col-sm-5 col-lg-5 col-md-push-1">
+				    <address>
+				    <h3>Location</h3>
+				    <p class="lead"><a href="https://www.google.com/maps/dir/My+Location/Real+Hacienda+Mexican+Restaurant,+3023+Highland+Pointe+Drive,+Owensboro,+KY+42303,+United+States">Real Hacienda<br>
+					Owensboro, KY 42303</a><br>
+				      Phone: 270-684-5595<br></p>
+				    </address>
+				  </div>
+				</div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
