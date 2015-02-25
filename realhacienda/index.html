@@ -57,10 +57,12 @@
 		  <h2>Welcome to</h2>
 		  <h1>Real Hacienda</h1>
 		  <p>Experience the taste and feel of Mexico's culinary culture!</p>
+          <p>Celebrate over 15 years of the Ortiz family's expertise.</p>
+          <iframe class=hidden-xs src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3154.5009703521!2d-87.067318!3d37.75484999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886fbab4210eaa73%3A0x3e182d66ddb14f8a!2sReal+Hacienda+Mexican+Restaurant!5e0!3m2!1sen!2sus!4v1424904699634" width="600" height="350" frameborder="0" style="border:0"></iframe>
 		  <p><a class="btn btn-primary btn-lg" href="#menu" role="button">Read Our Menu</a></p>
-		  <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Launch demo modal
-          </button> -->
+		  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#order">
+            Order Now!
+          </button>
 	  </div>
 	</div>
 	
@@ -691,6 +693,180 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Order Form</h4>
+          </div>
+          <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Your Name:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Your Number:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Your Email:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form group">
+                        <h4> Luncheon Menu </h4>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Taco
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Enchilada
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Tamale
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Tostada
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Chalupa
+                            </label>
+                        </div>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Tostaguac
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Chile Relleno
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Quesadilla
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form group">
+                        <h4> Lunch Specialties </h4>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Speedy Gonzales
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Huevos Rancheros
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Taco Salad
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Fajita
+                            </label>
+                        </div>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Chimichanga
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Taquitos Mexicanos
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Special Lunch #1
+                            </label>
+                        </div>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Special Lunch #2
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Special Lunch #3
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Burrito Real
+                            </label>
+                        </div>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Huevos con Chorizo
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Arroz con Pollo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form group">
+                        <h4> Sample Platters </h4>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> El Presidente
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Special Dinner
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Felipe's Dinner
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form group">
+                        <h4> Combination Dinners </h4>
+                        <select multiple class="form-control" id="sel2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                        </select>
+                    </div>
+                    <div class="form group">
+                        <h4>Beverages</h4>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Soft Drink
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Domestic Beer
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Mexican Beer
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Draft
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Margarita
+                            </label>
+                        </div>
+                    </div>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Order</button>
           </div>
         </div>
       </div>
