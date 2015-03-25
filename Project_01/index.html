@@ -1,13 +1,14 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <title>PV</title>
+      <title>Paras Vora</title>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link rel="stylesheet" href="css/custom.css">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta charset="utf-8">
     </head>
     <body>
     	<header>
@@ -16,14 +17,14 @@
 			      <a href="#!" class="brand-logo">Logo</a>
 			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			      <ul class="right hide-on-med-and-down">
-			        <li><a href="about.html">About</a></li>
-			        <li><a href="portfolio.html">Portfolio</a></li>
-			        <li><a href="contact.html">Contact</a></li>
+			        <li><a href="#about">About</a></li>
+			        <li><a href="#portfolio">Portfolio</a></li>
+			        <li><a class="modal-trigger" href="#contact">Contact</a></li>
 			      </ul>
 			      <ul class="side-nav" id="mobile-demo">
-			        <li><a href="about.html">About</a></li>
-			        <li><a href="portfolio.html">Portfolio</a></li>
-			        <li><a href="contact.html">Contact</a></li>
+			        <li><a href="#about">About</a></li>
+			        <li><a href="#portfolio">Portfolio</a></li>
+			        <li><a class="modal-trigger" href="#contact">Contact</a></li>
 			      </ul>
 			    </div>
 			</nav>
@@ -34,51 +35,257 @@
 					<div class="row">
 						<div class="col s12 center">
 							<!-- make thin font -->
-							<h1>Hi! I'm PV.</h1>
-							<h3>test</h3>
-
+							<h1 class="header center">Hi! I'm Paras Vora.</h1>
+							<h3>I'm an engineering student who, for some reason, wants to be a physician.</h3>
+              <!-- <a href="#about" class="btn-large waves-effect waves-light teal lighten-1">About me</a> -->
 						</div>
 					</div>
 				</div>
 			</section>
+      <section id="about">
+        <!--   Icon Section   -->
+        <div class="row">
 
-			<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center"><i class="mdi-social-person-outline"></i></h2>
+              <h5 class="center">What I'm about</h5>
+
+              <p class="light">I'm a 20-year old student from Kentucky, and spend my time learning, researching potential cancer treatments, helping fundraise for the American Cancer Society, playing tennis, working on small web projects, and amateur photography.</p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center"><i class="mdi-social-school"></i></h2>
+              <h5 class="center">Combined Passions</h5>
+
+              <p class="light">As a biomedical engineer, computer science major, and pre-medical student, I have a range of experiences to draw upon, and want to use the skills I have developed in order to help people in a meaningful way.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center"><i class="mdi-social-group"></i></h2>
+              <h5 class="center">Easy to work with</h5>
+
+              <p class="light">I'm capable of working with, and leading, groups of all sizes. I make sure that my documentation is detailed and specific enough to help anyone get started. I'm open to feedback and criticism</p>
+            </div>
+          </div>
+          <div id="dev" class="col s9 offset-s1 center" title="">
+              <div class="row">
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/css.png" alt="css" title="">
+                    <!-- <h5>CSS</h5> -->
+                </div>
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/html.png" alt="html" title="">
+                    <!-- <h5>HTML</h5> -->
+                </div>
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/js.png" alt="javascript" title="">
+                    <!-- <h5>Javascript</h5> -->
+                </div>
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/java.png" alt="java" title="">
+                    <!-- <h5>Java</h5> -->
+                </div>
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/PS.png" alt="photoshop" title="">
+                    <!-- <h5>Photoshop</h5> -->
+                </div>
+                <div class="col s4 m2 l2" title="">
+                    <img class="responsive-img" src="resources/pixelmator.png" alt="pixelmator" title="">
+                    <!-- <h5>Pixelmator</h5> -->
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s8 offset-s2">
+            <h5>I love innovation and admire creativity. As a future physician, I want to take my background and apply it to a field that is in constant need of innovation, with a little bit of creativity. My passion for problem-solving drives me to finding lasting solutions to current problems.</h5>
+          </div>
+        </div>
+
+      </section>
+      <section id="portfolio">
+        <div class="row">
+          <div class="col s12">
+          <h1 class="center">Portfolio</h1>
+          </div>
+          <div class="col s12 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="http://placehold.it/300x300">
+                <span class="card-title">Senior Design Project</span>
+              </div>
+              <div class="card-content">
+                <p>Talk about eye tracking. Senior Design, team project, used Java and SQL, The Eye Tribe tracker, interface, help with reading proficiency, heatmap</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Report Link</a>
+                <a class="modal-trigger" href='#SDmodal'>More...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="http://placehold.it/300x300">
+                <span class="card-title">Creative Programming Project</span>
+              </div>
+              <div class="card-content">
+                <p>Talk about relay for life registration page, what I did to make it better, the web technologies I used.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Link to site</a>
+                <a class="modal-trigger" href='#RFLmodal'>More...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="http://placehold.it/300x300">
+                <span class="card-title">Research Project</span>
+              </div>
+              <div class="card-content">
+                <p>Talk about Research paper, what I contributed, and why it relates to what I want to provide as a service.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Paper/Journal Link</a>
+                <a class="modal-trigger" href='#ResearchModal'>More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="callToAction">
+        <div class="row">
+          <div class="col s6 offset-s3 center">
+          <h2>Interesting in working with me?</h2>
+            <a href="resources/Resume-Paras_vora.pdf" class="btn-large waves-effect waves-light teal lighten-1">Check out my Résumé</a>
+            <a href="#contact" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Get in Touch</a>
+            <p>I hope my skillset can help you achieve your goals in making a difference.</p>
+          </div>
+        </div>
+        
+      </section>
+
+			<!-- <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 			    <a class="btn-floating btn-large red">
 			      <i class="large mdi-editor-mode-edit"></i>
 			    </a>
 			    <ul>
-			      <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
-			      <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
-			      <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
-			      <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+			      <li><a class="btn-floating red">Item</a></li>
+			      <li><a class="btn-floating yellow darken-1">Item</a></li>
+			      <li><a class="btn-floating green">Item</a></li>
+			      <li><a class="btn-floating blue">Item</a></li>
 			    </ul>
-			</div>
+			</div> -->
 		</main>
 		<footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text">parasvora.com</h5>
+                <p class="grey-text text-lighten-4">This is the personal portfolio of soon to be graduate/soon to be medical student Paras Vora. Showcasing his projects and research, as well as his interests.</p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Paras Vora</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><b>(270) 315-8726</b></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><b>me@parasvora.com</b></a></li>
+                  <li><!-- Modal Trigger -->
+                  <a class="grey-text text-lighten-3 waves-effect waves-light modal-trigger" href="#contact">Contact</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            	© 2014 Copyright Text
-            	<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            	© 2015 Paras Vora
+            	<a class="grey-text text-lighten-4 right" href="#!">Social 1</a>
+              <a class="grey-text text-lighten-4 right" href="#!">Social 2</a>
+              <a class="grey-text text-lighten-4 right" href="#!">Social 3</a>
+              <a class="grey-text text-lighten-4 right" href="#!">Social 4</a>
+              
             </div>
+            
           </div>
-        </footer>
+    </footer>
+
+
+
+    <!-- Modal Structure -->
+    <div id="contact" class="modal">
+      <div class="modal-content">
+        <h4>Contact Me?</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Message</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="SDmodal" class="modal">
+      <div class="modal-content">
+        <h4>Biomedical Engineering Senior Design</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequuntur, sit, officia labore autem sint, ipsa perspiciatis ab, tempora ipsam praesentium accusantium. Ea id maxime error aperiam ipsum ab veniam.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="RFLmodal" class="modal">
+      <div class="modal-content">
+        <h4>Relay For Life Check-in Page</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ullam quibusdam natus aspernatur, voluptate veniam quos iste repudiandae corporis sit, quidem dicta sint blanditiis quae earum cum perspiciatis. Eos, atque?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="ResearchModal" class="modal">
+      <div class="modal-content">
+        <h4>Research</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis corrupti commodi adipisci facere illum minima neque officiis architecto quidem laboriosam similique repudiandae aliquid tempora, natus autem laudantium amet reiciendis aperiam.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+      </div>
+    </div>
 	<!--
       <div style='position: relative; padding-bottom: 76%; height: 0; overflow: hidden;'><iframe id='iframe' src='http://flickrit.com/slideshowholder.php?height=75&size=big&userId=124876696@N02&click=true&credit=1&thumbnails=0&transition=4&layoutType=responsive&sort=0' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div> -->
       <!--Import jQuery before materialize.js-->
@@ -87,6 +294,7 @@
       <script>
       	$( document ).ready(function(){
       		$(".button-collapse").sideNav();
+          $('.modal-trigger').leanModal();
       	});
       </script>
     </body>
