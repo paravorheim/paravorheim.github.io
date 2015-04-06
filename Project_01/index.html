@@ -3,9 +3,9 @@
     <head>
       <title>Paras Vora</title>
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="stylesheet" href="css/custom.css">
-
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       <meta charset="utf-8">
@@ -13,8 +13,8 @@
     <body>
     	<header>
     		<nav>
-			    <div class="nav-wrapper">
-			      <a href="#!" class="brand-logo">parasvora.com</a>
+			    <div class="nav-wrapper amber darken-2">
+			      <a href="#" class="brand-logo">&emsp; parasvora.com</a>
 			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			      <ul class="right hide-on-med-and-down">
 			        <li><a href="#about">About</a></li>
@@ -36,8 +36,11 @@
 						<div class="col s12 center">
 							<!-- make thin font -->
 							<h1 class="header center">Hi! I'm Paras Vora.</h1>
-							<h4>I'm an engineering student who, for some reason, wants to be a physician. </h4>
-              <h3>I care about making the world a better place. To do that, I develop and apply technological solutions to pre-existing problems.</h3>
+							<h4 class="light">I'm an engineering student who, for some reason, wants to be a physician. </h4>
+              <h4 class="light">I care about making the world a better place. To do that, I develop and apply technological solutions to pre-existing problems.</h4>
+              <a href="resources/Resume-Paras_vora.pdf" class="btn-large waves-effect waves-light teal lighten-1">Check out my Résumé</a>
+              <a href="#portfolio" class="btn-large waves-effect waves-light teal lighten-1">View My Portfolio</a>
+              <a href="#contact" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Get in Touch</a>
               <!-- <a href="#about" class="btn-large waves-effect waves-light teal lighten-1">About me</a> -->
 						</div>
 					</div>
@@ -47,7 +50,7 @@
         <!--   Icon Section   -->
         <div class="row">
 
-          <div class="col s12 m4">
+          <div class="col s12 m4 ">
             <div class="icon-block">
               <h2 class="center"><i class="mdi-social-person-outline"></i></h2>
               <h5 class="center">What I'm about</h5>
@@ -103,7 +106,7 @@
         </div>
         <div class="row">
           <div class="col s8 offset-s2">
-            <h5>I love innovation and admire creativity. As a future physician, I want to take my background and apply it to a field that is in constant need of innovation, with a little bit of creativity. My passion for problem-solving drives me to finding lasting solutions to current problems.</h5>
+            <h5 class="light">I love innovation and admire creativity. As a future physician, I want to take my background and apply it to a field that is in constant need of innovation, with a little bit of creativity. My passion for problem-solving drives me to finding lasting solutions to current problems.</h5>
           </div>
         </div>
 
@@ -114,13 +117,13 @@
           <h1 class="center">Portfolio</h1>
           </div>
           <div class="col s12 m4">
-            <div class="card medium">
-              <div class="card-image">
+            <div class="card teal lighten-1">
+              <div class="card-image hide-on-small-and-down">
                 <img src="resources/eye-tracking.jpg">
                 <span class="card-title">Senior Design Project</span>
               </div>
               <div class="card-content">
-                <p>A team project, using Java and SQL, and the Eye Tribe eye-tracker to evaluate reading performance.</p>
+                <p>A team project, using Java and SQL, and the Eye Tribe eye-tracker to evaluate reading performance. Competed in a poster competition.</p>
               </div>
               <div class="card-action">
                 <a href="https://www.dropbox.com/s/23kx048uaz1774e/27_Final%20Report_FINAL.pdf?raw=1">Link to Report</a>
@@ -129,13 +132,13 @@
             </div>
           </div>
           <div class="col s12 m4">
-            <div class="card medium">
-              <div class="card-image">
-                <img src="resources/relaydate.png">
+            <div class="card teal lighten-1">
+              <div class="card-image hide-on-small-and-down">
+                <img src="resources/relaydate.jpg">
                 <span class="card-title">Creative Programming Project</span>
               </div>
               <div class="card-content">
-                <p>As part of my rapid prototyping course's creative programming assignment, and my involvement with Relay For Life of Washington University, I revamped our check-in process.</p>
+                <p>As part of my rapid prototyping course's creative programming assignment, and my involvement with Relay For Life, I revamped our check-in process.</p>
               </div>
               <div class="card-action">
                 <a href="http://ec2-54-69-91-146.us-west-2.compute.amazonaws.com/~parasvora/creative/">Link to site</a>
@@ -145,9 +148,9 @@
           </div>
 
           <div class="col s12 m4">
-            <div class="card medium">
-              <div class="card-image">
-                <img src="http://www.mayo.edu/research/~/media/kcms/gbs/research/images/2013/03/07/14/02/tph1084206_08.ashx">
+            <div class="card teal lighten-1">
+              <div class="card-image hide-on-small-and-down">
+                <img src="resources/bone.jpg">
                 <span class="card-title">Research Project</span>
               </div>
               <div class="card-content">
@@ -164,7 +167,7 @@
       <section id="callToAction">
         <div class="row">
           <div class="col s6 offset-s3 center">
-          <h2>Interesting in working with me?</h2>
+          <h2 class="header-text">Interested in working with me?</h2>
             <a href="resources/Resume-Paras_vora.pdf" class="btn-large waves-effect waves-light teal lighten-1">Check out my Résumé</a>
             <a href="#contact" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Get in Touch</a>
             <p>I hope my skillset can help you achieve your goals in making a difference.</p>
@@ -185,11 +188,11 @@
 			    </ul>
 			</div> -->
 		</main>
-		<footer class="page-footer">
+		<footer class="page-footer amber darken-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">parasvora.com</h5>
+                <h5 class="white-text light">parasvora.com</h5>
                 <p class="grey-text text-lighten-4">This is the personal portfolio of soon to be graduate/soon to be medical student Paras Vora. Showcasing his projects and research, as well as his interests.</p>
               </div>
               <div class="col l4 offset-l2 s12">
@@ -322,8 +325,25 @@
       <script>
       	$( document ).ready(function(){
       		$(".button-collapse").sideNav();
+
           $('.modal-trigger').leanModal();
       	});
+      </script>
+      <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top 
+                }, 500);
+                return false;
+              }
+            }
+          });
+        });
       </script>
     </body>
   </html>

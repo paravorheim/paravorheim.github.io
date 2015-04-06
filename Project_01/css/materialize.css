@@ -5425,7 +5425,7 @@ small {
     .card .card-title.activator {
       cursor: pointer; }
   .card a {
-    color: #ffab40;
+    color: #ffffff;
     margin-right: 20px;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
@@ -5493,7 +5493,7 @@ small {
     box-sizing: border-box; }
     .card .card-content p {
       margin: 0;
-      color: inherit; }
+      color: #ffffff; }
     .card .card-content .card-title {
       line-height: 48px; }
   .card .card-action {
