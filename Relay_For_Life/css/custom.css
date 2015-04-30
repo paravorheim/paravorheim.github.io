@@ -1,0 +1,39 @@
+.btn-primary {
+	background-color: #46D8D2;
+	border-color: #41cbbf;
+}
+.btn-primary:hover {
+	background-color: #6e1070;
+	border-color: #41cbbf;
+}
+
+.jumbotron {
+	color: #ffffff;
+	background-color: #500778;
+}
+
+a.prettylink {
+	color: #46D8D2;
+}
+
+.jumbotron small {
+	color: #ffffff
+}
+
+.modal-header {
+	color: #ffffff;
+	background-color: #500778;
+}
+
+.modal-footer {
+	color: #ffffff;
+	background-color: #500778;
+}
+
+.modal-header span {
+	color: #ffffff;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}

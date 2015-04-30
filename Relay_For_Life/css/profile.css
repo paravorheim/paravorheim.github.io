@@ -1,6 +1,6 @@
-.square, .btn {
+/*.square, .btn {
     border-radius: 0px!important;
-}
+}*/
 
 /* -- color classes -- */
 .coralbg {
@@ -95,7 +95,7 @@ div.user-menu-btns div.btn-group-vertical>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #46D8D2;
+  border-left: 10px solid #500778;
 }
 /* -- The main tab & content styling of the vertical buttons info-- */
 div.user-menu-content {
@@ -120,7 +120,7 @@ div.user-menu div.user-menu-content:not(.active){
 
 /* -- The btn stylings for the btn icons -- */
 .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
-.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn-labeled {padding-top: 0;padding-bottom: 0; border-radius: 3px;}
 
 /* -- Custom classes for the snippet, won't effect any existing bootstrap classes of your site, but can be reused. -- */
 
@@ -193,6 +193,7 @@ div.user-menu div.user-menu-content:not(.active){
     text-transform: uppercase;
     font-weight: 300;
     text-align: right;
+    border-radius: 3px; 
 }
 
 .info p, .stats p {
@@ -211,7 +212,10 @@ div.user-menu div.user-menu-content:not(.active){
     margin-top: 15px;
 }
 
-.square, .btn {
+/*.square, .btn {
+    border-radius: 0px!important;
+}*/
+.square {
     border-radius: 0px!important;
 }
 
