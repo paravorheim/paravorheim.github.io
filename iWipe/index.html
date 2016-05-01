@@ -22,8 +22,11 @@ $(document).on("tap", "#nextMouse", function(e) {
   column++;
   row = 1;
   count = 0;
+  document.getElementById("numOfTaps").innerHTML = count || 0;
   $("#nextMouse").hide();
   $("#saveToCSV").hide();
+  $("#countButton").show();
+  $("#clear").click();
 });
 $(document).on("tap", "#saveToCSV", function(e) {
   var csv = Papa.unparse(table);
@@ -97,6 +100,7 @@ start.onclick = timer;
 stop.onclick = function() {
     clearTimeout(t);
     console.log(table);
+    $("#countButton").hide();
     $("#nextMouse").show();
     $("#saveToCSV").show();
     //load a div with starting a new mouse
