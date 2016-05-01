@@ -38,7 +38,7 @@ $(document).on("tap", "#nextMouse", function(e) {
 $(document).on("tap", "#saveToCSV", function(e) {
   var email = prompt("Please enter the email address","paras.vora@uky.edu");
   var csv = Papa.unparse(table);
-  $.post("phpemailscript.php", {data:csv, recipient:email}, function(results){
+  $.post("http://ec2-52-38-15-225.us-west-2.compute.amazonaws.com/~parasvora/phpemailscript/phpemailscript.php", {data:csv, recipient:email}, function(results){
   // the output of the response is now handled via a variable call 'results'
   alert(results);
 });
