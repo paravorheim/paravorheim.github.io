@@ -36,10 +36,15 @@ $(document).on("tap", "#nextMouse", function(e) {
   $("#clear").click();
 });
 $(document).on("tap", "#saveToCSV", function(e) {
+  var email = prompt("Please enter the email address","paras.vora@uky.edu");
   var csv = Papa.unparse(table);
+  $.post("phpemailscript.php", {data:csv, recipient:email}, function(results){
+  // the output of the response is now handled via a variable call 'results'
+  alert(results);
+});
   //emailjs.send("gmail","iwipe",{to_email: "paravorheim@gmail.com", notes: csv});
-  var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
-  saveAs(blob, "data.csv");
+  //var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
+  //saveAs(blob, "data.csv");
 });
 </script>
 </head>
@@ -60,7 +65,7 @@ $(document).on("tap", "#saveToCSV", function(e) {
 
   <div>
     <button id="nextMouse">Next Mouse</button>
-    <button id="saveToCSV">Save to CSV/Excel</button>
+    <button id="saveToCSV">Email CSV/Excel</button>
   </div>
 </div>
 
