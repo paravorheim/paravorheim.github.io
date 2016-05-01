@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="papaparse.min.js"></script>
+<script src="FileSaver.min.js"></script>
+<script>
+var row = 1;
+var column = 1;
+var count = 0;
+var countToSubtract = 0;
+var table = [[null,1,2,3,4],[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]];
+//console.log(table);
+$(document).on("tap", "#countButton", function(e) {
+  count++;
+  document.getElementById("numOfTaps").innerHTML = count || 0;
+});
+$(document).on("tap", "#nextMouse", function(e) {
+  column++;
+  row = 1;
+  count = 0;
+  $("#nextMouse").hide();
+  $("#saveToCSV").hide();
+});
+$(document).on("tap", "#saveToCSV", function(e) {
+  var csv = Papa.unparse(table);
+  var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, "data.csv");
+});
+</script>
+</head>
+<body>
+
+<div>
+  <div>
+    <h1><time>00:00:00</time></h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="clear">clear</button>
+    <h1 id="numOfTaps">0</h1>
+  </div>
+
+  <div>
+    <button id="countButton">Tap</button>
+  </div>
+
+  <div>
+    <button id="nextMouse">Next Mouse</button>
+    <button id="saveToCSV">Save to CSV/Excel</button>
+  </div>
+</div>
+
+</body>
+<script>
+  $("#nextMouse").hide();
+  $("#saveToCSV").hide();
+  var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        table[row][column] = count-countToSubtract;
+        countToSubtract = count;
+        row++;
+        //add the number of current counts to the row for that minute
+        //reset the number of current counts for the next minute
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+//timer();
+
+
+/* Start button */
+start.onclick = timer;
+
+/* Stop button */
+stop.onclick = function() {
+    clearTimeout(t);
+    console.log(table);
+    $("#nextMouse").show();
+    $("#saveToCSV").show();
+    //load a div with starting a new mouse
+      //If the new mouse is started, have to have a var to add to a different column.
+    //load a div with save to CSV
+}
+
+/* Clear button */
+clear.onclick = function() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+</script>
+</html>
