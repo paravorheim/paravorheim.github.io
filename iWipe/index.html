@@ -32,7 +32,7 @@ $(document).on("tap", "#nextMouse", function(e) {
 $(document).on("tap", "#saveToCSV", function(e) {
   var csv = Papa.unparse(table);
   var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
-  saveAs(blob, "data.csv");
+  saveAs(blob, "data.csv.zip");
 });
 </script>
 </head>
