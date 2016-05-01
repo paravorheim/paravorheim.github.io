@@ -36,10 +36,10 @@ $(document).on("tap", "#nextMouse", function(e) {
   $("#clear").click();
 });
 $(document).on("tap", "#saveToCSV", function(e) {
-  var csv = Papa.unparse(table);
-  emailjs.send("gmail","iwipe",{to_email: "paravorheim@gmail.com", notes: csv});
-  //var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
-  //saveAs(blob, "data.csv");
+  //var csv = Papa.unparse(table);
+  //emailjs.send("gmail","iwipe",{to_email: "paravorheim@gmail.com", notes: csv});
+  var blob = new Blob([csv], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, "data.csv");
 });
 </script>
 </head>
