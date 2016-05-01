@@ -22,6 +22,7 @@ $(document).on("tap", "#nextMouse", function(e) {
   column++;
   row = 1;
   count = 0;
+  countToSubtract = 0;
   document.getElementById("numOfTaps").innerHTML = count || 0;
   $("#nextMouse").hide();
   $("#saveToCSV").hide();
@@ -99,7 +100,7 @@ start.onclick = timer;
 /* Stop button */
 stop.onclick = function() {
     clearTimeout(t);
-    console.log(table);
+    //console.log(table);
     $("#countButton").hide();
     $("#nextMouse").show();
     $("#saveToCSV").show();
