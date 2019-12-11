@@ -23,7 +23,7 @@ const MOBILENET_MODEL_PATH =
 
 // const MOBILENET_MODEL_PATH = '../../tfjs_models/model.json';
 
-const IMAGE_SIZE = 48;
+const IMAGE_SIZE = 224;
 const TOPK_PREDICTIONS = 10;
 
 
