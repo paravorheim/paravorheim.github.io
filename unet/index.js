@@ -17,13 +17,13 @@
 
 //import {IMAGENET_CLASSES} from './imagenet_classes';
 
-const MOBILENET_MODEL_PATH =
-    // tslint:disable-next-line:max-line-length
-    'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json';
+// const MOBILENET_MODEL_PATH =
+//     // tslint:disable-next-line:max-line-length
+//     'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json';
 
-// const MOBILENET_MODEL_PATH = '../../tfjs_models/model.json';
+const MOBILENET_MODEL_PATH = './tfjs_models/model.json';
 
-const IMAGE_SIZE = 224;
+const IMAGE_SIZE = 48;
 const TOPK_PREDICTIONS = 10;
 
 
@@ -45,17 +45,17 @@ const mobilenetDemo = async () => {
 
   status('');
 
-  // Make a prediction through the locally hosted cat.jpg.
-  const catElement = document.getElementById('cat');
-  if (catElement.complete && catElement.naturalHeight !== 0) {
-    predict(catElement);
-    catElement.style.display = '';
-  } else {
-    catElement.onload = () => {
-      predict(catElement);
-      catElement.style.display = '';
-    }
-  }
+  // // Make a prediction through the locally hosted cat.jpg.
+  // const catElement = document.getElementById('cat');
+  // if (catElement.complete && catElement.naturalHeight !== 0) {
+  //   predict(catElement);
+  //   catElement.style.display = '';
+  // } else {
+  //   catElement.onload = () => {
+  //     predict(catElement);
+  //     catElement.style.display = '';
+  //   }
+  // }
 
   document.getElementById('file-container').style.display = '';
 };
