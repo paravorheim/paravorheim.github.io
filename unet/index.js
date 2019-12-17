@@ -60,7 +60,7 @@ const mobilenetDemo = async () => {
     img = tf.browser.fromPixels(catElement).toFloat();
     procImg = myPreProc(img);
     procImg = procImg.reshape([1, 224, 224]);
-    procImg = procImg.reshape([224, 224, 1]);
+    procImg = procImg.reshape([224, 224]);
     returnImg = tf.browser.toPixels (procImg, canvas)
   }
 
