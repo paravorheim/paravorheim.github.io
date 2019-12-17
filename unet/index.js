@@ -26,8 +26,6 @@ const MOBILENET_MODEL_PATH = './tfjs_models/model.json';
 const IMAGE_SIZE = 48;
 const TOPK_PREDICTIONS = 10;
 
-
-
 let mobilenet;
 const mobilenetDemo = async () => {
   status('Loading model...');
@@ -56,6 +54,13 @@ const mobilenetDemo = async () => {
   //     catElement.style.display = '';
   //   }
   // }
+  const catElement = document.getElementById('cat');
+  canvas = document.getElementById('newImg');
+  if (catElement.complete && catElement.naturalHeight !== 0) { 
+    img = tf.browser.fromPixels(catElement).toFloat();
+    procImg = myPreProc(img);
+    returnImg = tf.toPixels (procImg, canvas)
+  }
 
   document.getElementById('file-container').style.display = '';
 };
@@ -76,6 +81,8 @@ async function predict(imgElement) {
   const logits = tf.tidy(() => {
     // tf.browser.fromPixels() returns a Tensor from an image element.
     const img = tf.browser.fromPixels(imgElement).toFloat();
+    //0.2989 * R + 0.5870 * G + 0.1140 * B
+
 
     const offset = tf.scalar(127.5);
     // Normalize the image from [0, 255] to [-1, 1].
@@ -98,6 +105,25 @@ async function predict(imgElement) {
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
+}
+
+function rgb2gray(img) {
+  // the scalars needed for conversion of each channel
+  // per the formula: gray = 0.2989 * R + 0.5870 * G + 0.1140 * B
+  const rFactor = tf.scalar(0.2989);
+  const gFactor = tf.scalar(0.5870);
+  const bFactor = tf.scalar(0.1140);
+
+  // separate out each channel. x.shape[0] and x.shape[1] will give you
+  // the correct dimensions regardless of image size
+  r = img.slice([0,0,0], [img.shape[0], img.shape[1], 1]);
+  g = img.slice([0,0,1], [img.shape[0], img.shape[1], 1]);
+  b = img.slice([0,0,2], [img.shape[0], img.shape[1], 1]);
+
+  // add all the tensors together, as they should all be the same dimensions.
+  gray = r.mul(rFactor).add(g.mul(gFactor)).add(b.mul(bFactor));
+
+  return gray;
 }
 
 /**
@@ -191,6 +217,62 @@ filesElement.addEventListener('change', evt => {
     reader.readAsDataURL(f);
   }
 });
+
+function myPreProc(img) {
+  //convert grayscale
+  gray = rgb2gray(img);
+  //CLAHE
+  //adjust gamma (1.2)
+  //normalize
+  procImg = gray.div(tf.scalar(255));
+  return procImg;
+}
+
+function generatePatches(img) {
+  procImg = myPreProc(img);
+  testImg = paintBorderOverlap(procImg, patchHeight, patchWidth, strideHeight, strideWidth);
+  patches = extract_ordered_overlap(testImg, patchHeight, patchWidth, strideHeight, strideWidth);
+}
+
+function paintBorderOverlap(img, patchHeight, patchWidth, strideHeight, strideWidth) {
+  imgH = img.shape[0];
+  imgW = img.shape[1];
+  leftoverH = (imgH-patchHeight) % strideHeight;
+  leftoverW = (imgW-patchWidth) % strideWidth;
+  padH = 0;
+  padW = 0;
+  if (leftoverH != 0) {
+    console.log("side H is not compatible with selected stride of " + strideHeight);
+    //pad with strideH-leftoverH pixels
+    padH = strideHeight - leftoverH;
+  }
+  if (leftoverW != 0) {
+    //pad with strideW-leftoverW pixels
+    padW = strideWidth - leftoverW;
+  }
+  return img.pad([0, padH], [0, padW], [0,0]);
+}
+
+function extract_ordered_overlap(img, patchHeight, patchWidth, strideHeight, strideWidth) {
+  imgH = img.shape[0];
+  imgW = img.shape[1];
+  nPatches = Math.floor(((imgH-patchHeight)/strideHeight + 1) * ((imgW-patchWidth)/strideWidth + 1))
+  let tempPatch = tf.zeros([patchHeight, patchWidth, 1]);
+  let patches = tf.zeros([patchHeight,patchWidth,1]);
+  patches = tf.stack([patches, tempPatch]);
+  let h;
+  let w;
+  for (h = 0; h < Math.floor((imgH-patchHeight)/strideHeight + 1); h++) {
+    //console.log(h);
+    for (w = 0; w < Math.floor((imgW - patchWidth)/strideWidth + 1); w++) {
+      tempPatch = img.slice([h*strideHeight, w*strideWidth, 0], [patchHeight,patchWidth,1])
+      patches = patches.concat([tempPatch.expandDims()]);
+      //console.log(w);
+    }
+  }
+  patches = patches.slice([2,0,0,0], []);
+  return patches;
+}
 
 const demoStatusElement = document.getElementById('status');
 const status = msg => demoStatusElement.innerText = msg;

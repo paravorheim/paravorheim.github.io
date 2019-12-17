@@ -73,13 +73,6 @@ limitations under the License.
 
     <section>
       <p class='section-head'>Model Output</p>
-
-      <div id="file-container-model" style="">
-        Upload model: <input type="file" id="upload-json"/>
-      </div>
-      <div id="file-container-weight" style="">
-        Upload weights: <input type="file" id="upload-weights"/>
-      </div>
       <div id="file-container" style="display: none">
         Upload an image: <input type="file" id="files" name="files[]" multiple />
       </div>
@@ -87,6 +80,9 @@ limitations under the License.
       <div id="predictions"></div>
 
       <img style="display: none" id="cat" src="cat.jpg" width=224 height=224 />
+    </section>
+    <section>
+      <canvas id="newImg" width="224" height="224" style="border:1px solid #000000;"></canvas>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
     <script src="index.js"></script>
