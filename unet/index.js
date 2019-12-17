@@ -59,7 +59,7 @@ const mobilenetDemo = async () => {
   if (catElement.complete && catElement.naturalHeight !== 0) { 
     img = tf.browser.fromPixels(catElement).toFloat();
     procImg = myPreProc(img);
-    returnImg = tf.toPixels (procImg, canvas)
+    returnImg = tf.browser.toPixels (procImg, canvas)
   }
 
   document.getElementById('file-container').style.display = '';
