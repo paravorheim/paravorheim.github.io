@@ -58,10 +58,9 @@ const mobilenetDemo = async () => {
   canvas = document.getElementById('newImg');
   if (catElement.complete && catElement.naturalHeight !== 0) { 
     img = tf.browser.fromPixels(catElement).toFloat();
-    procImg = myPreProc(img);
-    procImg = procImg.reshape([1, 224, 224]);
-    procImg = procImg.reshape([224, 224]);
-    returnImg = tf.browser.toPixels (procImg, canvas)
+    [patches, newImgH, newImgW] = generatePatches(img, 48, 48, 5, 5);
+    recompImg = recomposeOverlap(patches, newImgH, newImgW, 5, 5);
+    returnImg = tf.browser.toPixels (recompImg, canvas)
   }
 
   document.getElementById('file-container').style.display = '';
@@ -230,10 +229,11 @@ function myPreProc(img) {
   return procImg;
 }
 
-function generatePatches(img) {
+function generatePatches(img, patchHeight, patchWidth, strideHeight, strideWidth) {
   procImg = myPreProc(img);
-  testImg = paintBorderOverlap(procImg, patchHeight, patchWidth, strideHeight, strideWidth);
-  patches = extract_ordered_overlap(testImg, patchHeight, patchWidth, strideHeight, strideWidth);
+  [testImg, newImgH, newImgW] = paintBorderOverlap(procImg, patchHeight, patchWidth, strideHeight, strideWidth);
+  patches = extractOrderedOverlap(testImg, patchHeight, patchWidth, strideHeight, strideWidth);
+  return [patches, newImgH, newImgW];
 }
 
 function paintBorderOverlap(img, patchHeight, patchWidth, strideHeight, strideWidth) {
@@ -252,28 +252,62 @@ function paintBorderOverlap(img, patchHeight, patchWidth, strideHeight, strideWi
     //pad with strideW-leftoverW pixels
     padW = strideWidth - leftoverW;
   }
-  return img.pad([0, padH], [0, padW], [0,0]);
+  newImg = img.pad([0, padH], [0, padW], [0,0]);
+  return [newImg, newImg.shape[0], newImg.shape[1]];
 }
 
-function extract_ordered_overlap(img, patchHeight, patchWidth, strideHeight, strideWidth) {
+function extractOrderedOverlap(img, patchHeight, patchWidth, strideHeight, strideWidth) {
   imgH = img.shape[0];
   imgW = img.shape[1];
-  nPatches = Math.floor(((imgH-patchHeight)/strideHeight + 1) * ((imgW-patchWidth)/strideWidth + 1))
+  nPatches = (Math.floor((imgH-patchHeight)/strideHeight) + 1) * (Math.floor((imgW-patchWidth)/strideWidth) + 1);
   let tempPatch = tf.zeros([patchHeight, patchWidth, 1]);
   let patches = tf.zeros([patchHeight,patchWidth,1]);
   patches = tf.stack([patches, tempPatch]);
   let h;
   let w;
-  for (h = 0; h < Math.floor((imgH-patchHeight)/strideHeight + 1); h++) {
+  for (h = 0; h < Math.floor((imgH-patchHeight)/strideHeight) + 1; h++) {
     //console.log(h);
-    for (w = 0; w < Math.floor((imgW - patchWidth)/strideWidth + 1); w++) {
+    for (w = 0; w < Math.floor((imgW - patchWidth)/strideWidth) + 1; w++) {
       tempPatch = img.slice([h*strideHeight, w*strideWidth, 0], [patchHeight,patchWidth,1])
       patches = patches.concat([tempPatch.expandDims()]);
       //console.log(w);
     }
   }
   patches = patches.slice([2,0,0,0], []);
+  patches = patches.reshape([nPatches, 1, imgH, imgW])
   return patches;
+}
+
+function recomposeOverlap(predPatches, imgH, imgW, strideH, strideW) {
+  patchH = predPatches.shape[2];
+  patchW = predPatches.shape[3];
+  nPatchesH = Math.floor((imgH - patchH)/strideH) + 1;
+  nPatchesW = Math.floor((imgW - patchW)/strideW) + 1;
+  nPatches = nPatchesH + nPatchesW;
+  fullProb = tf.zeros([1, imgH, imgW]);
+  fullSum = tf.zeros([1, imgH, imgW]);
+  tempProb = tf.zeros([1, imgH, imgW]);
+  tempSum = tf.zeros([1, imgH, imgW]);
+  tempPatch = tf.zeros([1, patchH, patchW]);
+  tempPatchSum = tf.ones([1, patchH, patchW]);
+  k = 0;
+  for (h = 0; h < Math.floor((imgH-patchH)/strideH) + 1; h++) {
+    for (w = 0; w < Math.floor((imgW-patchW)/strideW) + 1; w++) {
+      tempPatch = patches.slice([k,0,0,0], [1]);
+      //tempPatch.print();
+      //console.log(tempPatch.shape);
+      tempProb = tempPatch.pad([[0,0], [0,0],[h*strideH, imgH-(h*strideH)-patchH],
+                            [w*strideW, imgW-(w*strideW)-patchW]]);
+      //console.log(tempProb.shape);
+      fullProb = fullProb.add(tempProb);
+      tempSum = tempPatchSum.pad([[0,0],[h*strideH, imgH-(h*strideH)-patchH],
+                            [w*strideW, imgW-(w*strideW)-patchW]]);
+      fullSum = fullSum.add(tempSum);
+      k = k+1;
+    }
+  }
+  avg = tf.div(fullProb.squeeze(), fullSum);
+  return avg;
 }
 
 const demoStatusElement = document.getElementById('status');
