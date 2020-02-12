@@ -60,6 +60,7 @@
 .topnav a.active {
   background-color: #FDFDFD;
   color: #333;
+  
 }
 
 /* Hide the link that should open and close the topnav on small screens */
