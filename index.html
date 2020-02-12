@@ -1,1 +1,120 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<title>Paras Vora</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel='stylesheet' href='styles.css'>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://kit.fontawesome.com/6a0769a1f2.js"></script>
+<script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="./w3images/avatar.jpg" style="width:100%" alt="Avatar">
+          <!-- <div class="w3-container w3-display-bottomleft w3-show w3-text-white">
+            <h3 class="w3-container">Paras Vora</h3>
+          </div> -->
+        </div>
+        <div class="w3-container">
+          <h3>Paras Vora</h3>
+          <p><i class="fas fa-stethoscope fa-fw w3-margin-right w3-large w3-text-blue-grey"></i>Medical Student</p>
+          <p><i class="fas fa-home fa-fw w3-margin-right w3-large w3-text-blue-grey"></i>Lexington, KY</p>
+          <p><i class="fas fa-envelope fa-fw w3-margin-right w3-large w3-text-blue-grey"></i>me@parasvora.com</p>
+          <hr>
+          <div>
+              <p class="w3-large"><b><i class="fas fa-asterisk fa-fw w3-margin-right w3-text-blue-grey"></i>Hobbies</b></p>
+              <p>I enjoy landscape photography - <a href="https://photos.google.com/share/AF1QipONl0h7fKG6mv4nTO_BvknnBbvrBKKyLyrg4xB7uOfHv8st5Y-GnvrydivH0tvHVQ?key=Zmlfblhkc2lOWFBXR0NxVzZSN0N0bDhaNkp6d3JB"> Check it out!</a></p>
+              <p>Coffee - Slowly becoming a snob of pour-overs.</p>
+              <p>Tennis - My cousin and I can mop the floor in doubles.</p>
+              <p>Technology - currently tinkering with the <a href="https://www.raspberrypi.org/">Raspberry Pi 4</a></p>
+          </div>
+        </div>
+      </div>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey "><i class="fas fa-user fa-fw w3-margin-right w3-xxlarge w3-text-blue-grey"></i>About Me</h2>
+        <div class="w3-container">
+            <p>Hi! I'm a medical student at the University of Kentucky, starting a residency in Ophthalmology soon. After dragging my feet on updating this website for years, I figured I could use it as a platform to talk about things that interest me. I'm passionate about medical service and medical innovation.</p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white cv">
+        <h2 class="w3-text-grey"><a href="./assets/CV_Paras_Jan_2020.pdf"><i class="fas fa-file fa-fw w3-margin-right w3-xxlarge w3-text-blue-grey"></i></a>CV</h2>
+        <div class="w3-container">
+                <p>Made using LaTeX. <a href="https://github.com/paravorheim/CV">View the source at Github.</a></p>
+        </div>
+        <div class="cv">
+            <iframe src="./assets/CV_Paras_Jan_2020.pdf" style="flex: 1;"></iframe>
+        </div>
+        <!-- <div class="w3-container">
+          <h5 class="w3-opacity"><b>University of Kentucky College of Medicine</b></h5>
+          <h6 class="w3-text-blue-grey"><i class="fas fa-calendar fa-fw w3-margin-right"></i>2015 - 2020</h6>
+          <p>MD expected May 2020</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Washington University in St. Louis</b></h5>
+          <h6 class="w3-text-blue-grey"><i class="fas fa-calendar fa-fw w3-margin-right"></i>2011 - 2015</h6>
+          <p>BS in Biomedical Engineering and Computer Science</p>
+          <hr>
+        </div> -->
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-blue-grey w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <a href="https://www.facebook.com/paravorheim" style="text-decoration:none;"><i class="fab fa-facebook w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/voranicline/" style="text-decoration:none;"><i class="fab fa-instagram w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/in/voraparas/" style="text-decoration:none;"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+  <a href="https://github.com/paravorheim" style="text-decoration:none;"><i class="fab fa-github w3-hover-opacity"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

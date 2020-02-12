@@ -1,0 +1,29 @@
+.col-pv, html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-pv {
+    display:flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    /* height: 100%; */
+}
+/* .row-pv {
+  display:flex;
+  min-height: 100%;
+} */
+.rc-item {
+    display: flex;
+    flex-direction: column;
+}
+.cv {
+  flex: 1;
+  height: 50vh;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 1%;
+}
