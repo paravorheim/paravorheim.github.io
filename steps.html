@@ -26,6 +26,10 @@
             count = count + 1;
         }
     }
+    function refreshIframe() {
+      var ifr = document.getElementById('leaderboard');
+      ifr.src = ifr.src;
+    }
 </script>
 <!-- <script>
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -49,10 +53,21 @@ function myFunction() {
       display:block;
       float: right;
   }
+  .centered {
+    display: flex;
+    justify-content: center;
+  }
+  #reloadButton {
+    color: #f2f2f2;
+    background-color: #667D8A; /* Green */
+    border: none;
+    margin: 5px;
+    padding: 5px;
+  }
 </style>
 
 <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    html,body,h1,h2,h3,h4,h5,h6,button {font-family: "Roboto", sans-serif}
 </style>
 <body class="w3-light-grey">
     <div class="topnav" id="myTopnav">
@@ -64,12 +79,15 @@ function myFunction() {
           <i class="fa fa-bars"></i>
         </a>
     </div>
+    <div class="centered">
+      <button id="reloadButton" type="button" onclick="refreshIframe();">Reload Leaderboard</button>
+    </div>
     <div class="divLeft">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZwi1RW7o8qGqeBFL9QswegcXzGY2dqFkzkD0mWS8TjUc2Pw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     <div class="divRight">
       <h6>Leaderboard</h1>
-      <iframe src="https://docs.google.com/spreadsheets/d/1dnW3K-aXkXaEig97BiDjeMuQZz8SI1OrBXLQdY9W12A/gviz/tq?tqx=out:html&tq&gid=2060707148" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">..Loading</iframe>
+      <iframe id="leaderboard" src="https://docs.google.com/spreadsheets/d/1dnW3K-aXkXaEig97BiDjeMuQZz8SI1OrBXLQdY9W12A/gviz/tq?tqx=out:html&tq&gid=2060707148" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">..Loading</iframe>
     </div>
 </body>
 </html>
