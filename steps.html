@@ -8,6 +8,25 @@
 <link rel='stylesheet' href='styles.css'>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <script src="https://kit.fontawesome.com/6a0769a1f2.js"></script>
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+  function AdjustIFrame(id) {
+        var frame = document.getElementById(id);
+        var maxW = frame.scrollWidth;
+        var minW = maxW;
+        var FrameH = 100; //IFrame starting height
+        frame.style.height = FrameH + "px"
+        var count = 0
+        while (minW == maxW && count < 10000) {
+            FrameH = FrameH + 100; //Increment
+            frame.style.height = FrameH + "px";
+            minW = frame.scrollWidth;
+            count = count + 1;
+        }
+    }
+</script>
 <!-- <script>
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -19,6 +38,18 @@ function myFunction() {
   }
 }
 </script> -->
+<style type="text/css">
+  .divLeft {
+      width:70%;
+      display:block;
+      float: left;
+  }
+  .divRight {
+      width:30%;
+      display:block;
+      float: right;
+  }
+</style>
 
 <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
@@ -33,6 +64,12 @@ function myFunction() {
           <i class="fa fa-bars"></i>
         </a>
     </div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZwi1RW7o8qGqeBFL9QswegcXzGY2dqFkzkD0mWS8TjUc2Pw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="divLeft">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZwi1RW7o8qGqeBFL9QswegcXzGY2dqFkzkD0mWS8TjUc2Pw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    <div class="divRight">
+      <h6>Leaderboard</h1>
+      <iframe src="https://docs.google.com/spreadsheets/d/1dnW3K-aXkXaEig97BiDjeMuQZz8SI1OrBXLQdY9W12A/gviz/tq?tqx=out:html&tq&gid=2060707148" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">..Loading</iframe>
+    </div>
 </body>
 </html>
