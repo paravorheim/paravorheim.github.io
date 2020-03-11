@@ -30,6 +30,19 @@
       var ifr = document.getElementById('leaderboard');
       ifr.src = ifr.src;
     }
+    function switchView() {
+      refreshIframe();
+      var x = document.getElementById("stepsForm");
+      var y = document.getElementById("leaderboardDiv");
+      var button = document.getElementById("reloadButton")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        button.innerHTML = "Show Leaderboard"
+      } else {
+        x.style.display = "none";
+        button.innerHTML = "Add Steps"
+      }
+    }
 </script>
 <!-- <script>
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -43,15 +56,22 @@ function myFunction() {
 }
 </script> -->
 <style type="text/css">
+  #stepsForm {
+    display: block;
+  }
+  #leaderboardDiv {
+    display:block;
+    text-align: center;
+    margin: auto;
+  }
+  #leaderboard {
+    display:block;
+    margin: 10px;
+  }
   .divLeft {
       width:70%;
       display:block;
       float: left;
-  }
-  .divRight {
-      width:30%;
-      display:block;
-      float: right;
   }
   .centered {
     display: flex;
@@ -80,14 +100,17 @@ function myFunction() {
         </a>
     </div>
     <div class="centered">
-      <button id="reloadButton" type="button" onclick="refreshIframe();">Reload Leaderboard</button>
+      <button id="reloadButton" type="button" onclick="switchView();">Show Leaderboard</button>
     </div>
-    <div class="divLeft">
+    <div id="stepsForm">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZwi1RW7o8qGqeBFL9QswegcXzGY2dqFkzkD0mWS8TjUc2Pw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
-    <div class="divRight">
-      <h6>Leaderboard</h1>
-      <iframe id="leaderboard" src="https://docs.google.com/spreadsheets/d/1dnW3K-aXkXaEig97BiDjeMuQZz8SI1OrBXLQdY9W12A/gviz/tq?tqx=out:html&tq&gid=2060707148" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">..Loading</iframe>
+    <div id="leaderboardDiv">
+      <h4>Leaderboard</h4>
+      <!-- <div style="display:flex;position:relative;margin:0; justify-content: center;"> -->
+        <iframe id="leaderboard" src="https://docs.google.com/spreadsheets/d/1dnW3K-aXkXaEig97BiDjeMuQZz8SI1OrBXLQdY9W12A/gviz/tq?tqx=out:html&tq&gid=2060707148" width="500" height="1000" frameborder="0" marginheight="0" marginwidth="0">..Loading</iframe>
+      <!-- </div> -->
+      
     </div>
 </body>
 </html>
