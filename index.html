@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%239ab87b%22></rect><path fill=%22%23fff%22 d=%22M51.07 56.17L39.59 56.17L39.59 78.44L32.44 78.44L32.44 21.56L50.57 21.56Q58.50 21.56 63.03 26.31Q67.56 31.05 67.56 38.95L67.56 38.95Q67.56 47.15 63.24 51.58Q58.93 56.02 51.07 56.17L51.07 56.17ZM39.59 27.73L39.59 50.04L50.57 50.04Q55.33 50.04 57.87 47.19Q60.41 44.34 60.41 39.02L60.41 39.02Q60.41 33.91 57.79 30.82Q55.18 27.73 50.61 27.73L50.61 27.73L39.59 27.73Z%22></path></svg>" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="w3.css">
+<link rel='stylesheet' href='fonts.css'>
 <link rel='stylesheet' href='styles.css'>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<script src="https://kit.fontawesome.com/6a0769a1f2.js"></script>
+<script src="fontawesome.js"></script>
 <script>
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -27,7 +27,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <div class="topnav" id="myTopnav">
     <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
     <a href="./about.html">About</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -56,7 +56,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
           <div>
               <p class="w3-large"><b><i class="fas fa-asterisk fa-fw w3-margin-right w3-text-blue-grey"></i>Hobbies</b></p>
-              <p>I enjoy landscape photography - <a href="https://photos.google.com/share/AF1QipONl0h7fKG6mv4nTO_BvknnBbvrBKKyLyrg4xB7uOfHv8st5Y-GnvrydivH0tvHVQ?key=Zmlfblhkc2lOWFBXR0NxVzZSN0N0bDhaNkp6d3JB"> Check it out!</a></p>
+              <p>I enjoy photography - <a href="https://photos.google.com/share/AF1QipONl0h7fKG6mv4nTO_BvknnBbvrBKKyLyrg4xB7uOfHv8st5Y-GnvrydivH0tvHVQ?key=Zmlfblhkc2lOWFBXR0NxVzZSN0N0bDhaNkp6d3JB"> Check it out!</a></p>
               <p>Coffee - Slowly becoming a snob of pour-overs.</p>
               <p>Tennis - My cousin and I can mop the floor in doubles.</p>
               <p>Technology - currently tinkering with the <a href="https://www.raspberrypi.org/">Raspberry Pi 4</a></p>
@@ -77,13 +77,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 
-      <div class="w3-container w3-card w3-white cv">
-        <h2 class="w3-text-grey"><a href="./assets/CV_Paras_Jan_2020.pdf"><i class="fas fa-file fa-fw w3-margin-right w3-xxlarge w3-text-blue-grey"></i></a>CV</h2>
+      <div class="w3-container w3-card w3-white cv-container">
+        <h2 class="w3-text-grey"><a href="./assets/CV_Paras_Vora.pdf"><i class="fas fa-file fa-fw w3-margin-right w3-xxlarge w3-text-blue-grey"></i></a>CV</h2>
         <div class="w3-container">
-                <p>Made using LaTeX. <a href="https://github.com/paravorheim/CV">View the source at Github.</a></p>
+                <p>Made using LaTeX. <a href="https://github.com/paravorheim/CV">View the source at Github.</a>
+                <a href='./assets/CV_Paras_Vora.pdf'>Download PDF</a></p>
         </div>
         <div class="cv">
-            <iframe src="./assets/CV_Paras_Vora.pdf" style="flex: 1; frameborder: 0"></iframe>
+            <iframe src="./assets/CV_Paras_Vora.pdf#toolbar=0" style="flex: 1; frameborder: 0"></iframe>
+        </div>
+        <div class="cv-dark">
+          <iframe src="./assets/CV_black.pdf#toolbar=0" style="flex: 1; frameborder: 0"></iframe>
         </div>
         <!-- <div class="w3-container">
           <h5 class="w3-opacity"><b>University of Kentucky College of Medicine</b></h5>
@@ -114,7 +118,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <a href="https://www.instagram.com/voranicline/" style="text-decoration:none;"><i class="fab fa-instagram w3-hover-opacity"></i></a>
   <a href="https://www.linkedin.com/in/voraparas/" style="text-decoration:none;"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
   <a href="https://github.com/paravorheim" style="text-decoration:none;"><i class="fab fa-github w3-hover-opacity"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
 </footer>
 
 </body>
