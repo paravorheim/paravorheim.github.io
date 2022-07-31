@@ -131,7 +131,7 @@ function convertExam() {
         sleOD = sleOD + ', cornea ' + mJson[95]
     }
     if(mJson[99] != "Deep and quiet") {
-        sleOD = sleOD + ', AC ' + mJSON[99]
+        sleOD = sleOD + ', AC ' + mJson[99]
     }
     if(mJson[103] != "Normal pupil size and shape") {
         sleOD = sleOD + ', iris ' + mJson[103]
@@ -159,7 +159,7 @@ function convertExam() {
         sleOS = sleOS + ', cornea ' + mJson[96]
     }
     if(mJson[100] != "Deep and quiet") {
-        sleOS = sleOS + ', AC ' + mJSON[100]
+        sleOS = sleOS + ', AC ' + mJson[100]
     }
     if(mJson[104] != "Normal pupil size and shape") {
         sleOS = sleOS + ', iris ' + mJson[104]
