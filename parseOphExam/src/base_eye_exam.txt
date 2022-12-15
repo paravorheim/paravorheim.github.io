@@ -1,0 +1,54 @@
+Base Eye Exam 
+	
+Visual Acuity (Snellen - Linear) 
+	 	Right	Left
+	Dist sc	20/20	20/25 +1
+	Dist ph sc		NI
+
+
+	
+Pupils 
+	 	Dark	Light	APD
+	Right	3	2	
+	Left	3	2	present
+
+
+	
+Visual Fields 
+	 	Right	Left
+		Full	Full
+
+
+	
+Extraocular Movement 
+	 	Right	Left
+		Full	Full
+
+
+	
+Dilation 
+	Both eyes: 1% Tropicamide, 2.5% Phenylephrine @ 1:23 AM
+
+
+
+Slit Lamp and Fundus Exam 
+	
+Slit Lamp Exam 
+	 	Right	Left
+	Lids/Lashes	Normal for age	Normal for age
+	Conjunctiva/Sclera	Normal	Normal
+	Cornea	Clear and compact	Clear and compact
+	Anterior Chamber	Deep and quiet	Deep and quiet
+	Iris	Normal pupil size and shape	Normal pupil size and shape
+	Lens	Clear	Clear
+	Vitreous	Normal	Normal
+
+
+	
+Fundus Exam 
+	 	Right	Left
+	Disc	No edema, no vascularization, good color	Grade 4 disc edema, associated disc hemmorhage
+	C/D Ratio	0.2	could not assess
+	Macula	Normal reflex, without edema	Normal reflex, without edema
+	Vessels	Perfused, present tortuosity	Perfused, present tortuosity
+	Periphery	Attached, single dot blot heme temporally	2.5 DD hypopigmented lesion with clumped pigment; appears flat with well-demarcated borders
