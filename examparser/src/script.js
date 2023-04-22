@@ -778,11 +778,12 @@ function convertExam() {
         else {
             finalString = finalString.concat("***")
         }
-        finalString = finalString.concat("; ")
         if(pupAPDOD === "yes"  || pupAPDOD === "pos" || pupAPDOD === "+" || pupAPDOD === "Pos" || pupAPDOD === "Positive" || pupAPDOD === "APD" || pupAPDOD === "Yes") {
+            finalString = finalString.concat("; ")
             finalString = finalString.concat("+APD OD")
         }
         if(pupAPDOS === "yes"  || pupAPDOS === "pos" || pupAPDOS === "+" || pupAPDOS === "Pos" || pupAPDOS === "Positive" || pupAPDOS === "APD" || pupAPDOS === "Yes") {
+            finalString = finalString.concat("; ")
             finalString = finalString.concat("+APD OS")
         }
         finalString = finalString.concat("; ")
