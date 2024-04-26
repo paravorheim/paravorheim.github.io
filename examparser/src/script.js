@@ -620,6 +620,7 @@ function convertExam() {
     if(discOS === "No edema; no vascularization; good color (Volk 78 d Lens)" && cupToDiscOD === cupToDiscOS && maculaOS === "Normal reflex; without edema" && vesselsOS === "Perfused; no tortuosity or abnormality" && peripheryOS === "Attached; no retinal or choroidal lesions") {
         console.log("wnl; ")
     } else console.log("***; ")
+<<<<<<< HEAD:parseOphExam/src/script.js
     console.log("distVAscOD: " + distVAscOD)
     console.log("distVAccOD: " + distVAccOD)
     console.log("distVAscOS: " + distVAscOS)
@@ -652,6 +653,42 @@ function convertExam() {
     console.log("fieldOS: " + fieldOS)
     console.log("fieldRestrictOD: " + fieldRestrictOD)
     console.log("fieldRestrictOS: " + fieldRestrictOS)
+=======
+
+    console.log(distVAscOD)
+    console.log(distVAccOD)
+    console.log(distVAscOS)
+    console.log(distVAccOS)
+    console.log(distVAscphOD)
+    console.log(distVAscphOS)
+    console.log(distVAccphOD)
+    console.log(distVAccphOS)
+    console.log(nearVAscOD)
+    console.log(nearVAccOD)
+    console.log(nearVAscOS)
+    console.log(nearVAccOS)
+    console.log(iopOD)
+    console.log(iopOS)
+    console.log(eomOD) //if not full then just grabs the first direction
+    console.log(eomOS)
+    console.log(pupPERRLOD)
+    console.log(pupPERRLOS)
+    console.log(pupDarkOD)
+    console.log(pupDarkOS)
+    console.log(pupLightOD)
+    console.log(pupLightOS)
+    console.log(pupShapeOD)
+    console.log(pupShapeOS)
+    console.log(pupReactOD)
+    console.log(pupReactOS)
+    console.log(pupAPDOD)
+    console.log(pupAPDOS)
+    console.log(fieldOD)
+    console.log(fieldOS)
+    console.log(fieldRestrictOD)
+    console.log(fieldRestrictOS)
+
+>>>>>>> b0700a370491a89bf985329c412e3f7c20e2e85c:examparser/src/script.js
 
     console.log("externalOD: " + externalOD)
     console.log("externalOS: " + externalOS)
@@ -776,12 +813,13 @@ function convertExam() {
         else {
             finalString = finalString.concat("***")
         }
-        finalString = finalString.concat("; ")
-        if(pupAPDOD !== "") {
-            finalString = finalString.concat("APD OD")
+        if(pupAPDOD === "yes"  || pupAPDOD === "pos" || pupAPDOD === "+" || pupAPDOD === "Pos" || pupAPDOD === "Positive" || pupAPDOD === "APD" || pupAPDOD === "Yes") {
+            finalString = finalString.concat("; ")
+            finalString = finalString.concat("+APD OD")
         }
-        if(pupAPDOS !== "") {
-            finalString = finalString.concat("APD OS")
+        if(pupAPDOS === "yes"  || pupAPDOS === "pos" || pupAPDOS === "+" || pupAPDOS === "Pos" || pupAPDOS === "Positive" || pupAPDOS === "APD" || pupAPDOS === "Yes") {
+            finalString = finalString.concat("; ")
+            finalString = finalString.concat("+APD OS")
         }
         finalString = finalString.concat("; ")
     }
