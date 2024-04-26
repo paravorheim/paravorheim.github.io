@@ -1,0 +1,10 @@
+<strong>
+    <%= obj["First Name"] + " " + obj["Last Name"]%>
+</strong><br />
+<%= obj["Address"] %><br />
+<% if (obj["Subspecialty"]) { %>
+    <strong>Subspecialty: <%= obj["Subspecialty"] %></strong><br />
+<% } %>
+<% if (obj["Hours"]) { %>
+    Hours: <%= obj["Hours"] %><br />
+<% } %>

@@ -1,0 +1,18 @@
+<tr>                  
+    <td>
+        <%= obj["First Name"] + " " + obj["Last Name"] %>
+    </td>                  
+    <td>
+        <%= obj["Address"] %><br />
+        (<a href='http://maps.google.com/?q=<%= obj["Address"] %>' target='_blank'>Get directions</a>)
+    </td> 
+    <td>
+        <%= obj["Subspecialty"] %>
+    </td> 
+    <!-- <td>
+        <%= obj["Phone"] %>
+    </td>                 
+    <td>
+        <%= obj["Hours"] %>
+    </td> -->
+</tr>
