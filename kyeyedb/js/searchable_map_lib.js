@@ -73,7 +73,7 @@ var SearchableMapLib = {
 
       // method that we will use to update the control based on feature properties passed
       var hover_template;
-      $.get( "../templates/hover.ejs", function( template ) {
+      $.get( "../kyeyedb/templates/hover.ejs", function( template ) {
         hover_template = template;
       });
       SearchableMapLib.info.update = function (props) {
@@ -195,7 +195,7 @@ var SearchableMapLib = {
     }
     else {
       var row_content;
-      $.get( "../templates/table-row.ejs", function( template ) {
+      $.get( "../kyeyedb/templates/table-row.ejs", function( template ) {
           for (idx in SearchableMapLib.currentResults.features) {
             row_content = ejs.render(template, {obj: SearchableMapLib.currentResults.features[idx].properties});
 
@@ -320,7 +320,7 @@ var SearchableMapLib = {
 
   addIcon: function() {
     SearchableMapLib.centerMark = new L.Marker(SearchableMapLib.currentPinpoint, { icon: (new L.Icon({
-            iconUrl: '/img/blue-pushpin.png',
+            iconUrl: '../img/blue-pushpin.png',
             iconSize: [32, 32],
             iconAnchor: [10, 32]
     }))});
