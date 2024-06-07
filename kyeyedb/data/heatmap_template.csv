@@ -60,7 +60,9 @@ Address,Latitude,Longitude,Address found,Last Name,First Name,Subspecialty
 "Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Pearson,Andrew,Surgical Retina
 "Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Franklin,John,Peds
 "Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Moore,Daniel,Glaucoma
+"Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Marsili,Shane,
 "Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Huffman & Huffman,,
+"Huffman & Huffman, 161 Citizens Lane, Hazard, KY 41701",37.2596121,-83.1992453,"161 Citizens Lane, Hazard, KY 41701, USA",Marsili,Shane,
 "200 Medical Center Dr, Suite3a, Hazard, KY 41701",37.2785351,-83.2290711,"200 Medical Center Dr, Hazard, KY 41701, USA",Reddy,Syamala,
 "110 3rd St, Henderson, KY 42420",37.8419988,-87.5919035,"110 3rd St, Henderson, KY 42420, USA",Stearns,James,
 "205 W 15th St, Hopkinsville, KY 42240",36.8628662,-87.492313,"205 W 15th St, Hopkinsville, KY 42240, USA",Herrell,Paul,
@@ -131,7 +133,8 @@ Address,Latitude,Longitude,Address found,Last Name,First Name,Subspecialty
 "110 Conn Ter Ste 550, Lexington, KY 40508",38.0304861,-84.5103392,"110 Conn Terrace STE 550, Lexington, KY 40508, USA",Higgins,Eric,Medical Retina
 "University Of Kentucky, 800 Rose Street, Lexington, KY 40536",38.0321597,-84.5056912,"800 Rose St, Lexington, KY 40508, USA",Hill,Darren,
 "503 N Main St, London, KY 40741",37.1307717,-84.0860621,"503 N Main St, London, KY 40741, USA",Huffman,Mark,
-"504 N Main St, London, KY 40741",37.1308746,-84.0856567,"504 N Main St, London, KY 40741, USA",Huffman,jim,
+"504 N Main St, London, KY 40741",37.1308746,-84.0856567,"504 N Main St, London, KY 40741, USA",Marsili,Shane,
+"504 N Main St, London, KY 40741",37.1308746,-84.0856567,"504 N Main St, London, KY 40741, USA",Huffman,Jim,
 "505 N Main St, London, KY 40741",37.1307539,-84.0860787,"505 N Main St, London, KY 40741, USA",Blackburn,Peter,Surgical Retina
 "506 N Main St, London, KY 40741",37.1308808,-84.0856645,"506 N Main St, London, KY 40741, USA",Fraser,Claire,Surgical Retina
 "507 N Main St, London, KY 40741",37.1307569,-84.0860834,"507 N Main St, London, KY 40741, USA",Franklin,John,Peds
@@ -252,6 +255,7 @@ Address,Latitude,Longitude,Address found,Last Name,First Name,Subspecialty
 "Huffman & Huffman, 355 Langdon St, Somerset, KY 42503",37.0902633,-84.6200256,"355 Langdon St, Somerset, KY 42503, USA",Katz,Douglas,Cornea
 "Huffman & Huffman, 355 Langdon St, Somerset, KY 42503",37.0902633,-84.6200256,"355 Langdon St, Somerset, KY 42503, USA",Moore,Daniel,Glaucoma
 "Huffman & Huffman, 355 Langdon St, Somerset, KY 42503",37.0902633,-84.6200256,"355 Langdon St, Somerset, KY 42503, USA",Timoney,Peter,Oculoplastics
+"Huffman & Huffman, 355 Langdon St, Somerset, KY 42503",37.0902633,-84.6200256,"355 Langdon St, Somerset, KY 42503, USA",Marsili,Shane,
 "Huffman & Huffman, 355 Langdon St, Somerset, KY 42503",37.0902633,-84.6200256,"355 Langdon St, Somerset, KY 42503, USA",Huffman & Huffman,,
 "28531 Us Highway 119, South Williamson, KY 41503",37.6594769,-82.2731997,"28531 US-119, South Williamson, KY 41503, USA",Lambert,Brian,
 "225 Hospital Dr Ste 160, Winchester, KY 40391",38.0121134,-84.2152618,"225 Hospital Dr Suite 160, Winchester, KY 40391, USA",Simon,Mark,
